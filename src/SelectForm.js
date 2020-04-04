@@ -17,13 +17,13 @@ export default class SelectForm extends Component {
         <label htmlFor="male">Bitcoin</label>
         <input
           type="radio"
-          id="bitcoin-cash"
+          id="litecoin"
           name="currency"
-          value="bitcoin-cash"
+          value="litecoin"
           onChange={selectCurrency}
-          checked={currency === 'bitcoin-cash'}
+          checked={currency === 'litecoin'}
         />
-        <label htmlFor="male">Bitcoin Cash</label>
+        <label htmlFor="male">Litecoin</label>
         <input
           type="radio"
           id="ethereum"
