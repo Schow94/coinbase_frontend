@@ -1,0 +1,10 @@
+.select-form {
+  /* display: flex;
+  flex-direction: row;
+  justify-content: center; */
+  text-align: center;
+}
+
+input {
+  margin-left: 2em;
+}

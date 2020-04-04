@@ -1,10 +1,37 @@
 .title {
   display: flex;
   justify-content: center;
+  text-transform: uppercase;
 }
 
 .container {
-  /* font-family: 'Raleway', sans-serif; */
   font-family: 'Open Sans', sans-serif;
-  /* background-color: blue; */
+  display: flex;
+  flex-direction: column;
+}
+
+.csv-btn {
+  background-color: none;
+  padding: 1.5em;
+  border: 2px solid blue;
+  border-radius: 0.5em;
+  color: blue;
+  font-size: 0.7em;
+  font-weight: 600;
+  width: 120px;
+  position: relative;
+  margin-top: 1em;
+  display: inline-block;
+  margin-left: 81%;
+}
+
+.csv-btn:hover {
+  background-color: blue;
+  padding: 1.5em;
+  border: 2px solid blue;
+  border-radius: 0.5em;
+  color: white;
+  font-size: 0.7em;
+  font-weight: 600;
+  cursor: pointer;
 }
