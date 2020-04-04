@@ -35,7 +35,9 @@ export default class BtcPriceApp extends Component {
   //----------------------------- SORTING METHODS --------------------
   // TIME
   sortByTimeDesc = async () => {
-    const results = await axios.get(`${API_URL}/sortByTimeDesc`);
+    const results = await axios.get(
+      `${API_URL}/${this.state.currency}/sortByTimeDesc`
+    );
 
     this.setState({
       data: results.data.data,
@@ -43,7 +45,9 @@ export default class BtcPriceApp extends Component {
   };
 
   sortByTimeAsc = async () => {
-    const results = await axios.get(`${API_URL}/sortByTimeAsc`);
+    const results = await axios.get(
+      `${API_URL}/${this.state.currency}/sortByTimeAsc`
+    );
 
     this.setState({
       data: results.data.data,
@@ -52,7 +56,9 @@ export default class BtcPriceApp extends Component {
 
   // HIGH
   sortByHighDesc = async () => {
-    const results = await axios.get(`${API_URL}/sortByHighDesc`);
+    const results = await axios.get(
+      `${API_URL}/${this.state.currency}/sortByHighDesc`
+    );
 
     this.setState({
       data: results.data.data,
@@ -60,7 +66,9 @@ export default class BtcPriceApp extends Component {
   };
 
   sortByHighAsc = async () => {
-    const results = await axios.get(`${API_URL}/sortByHighAsc`);
+    const results = await axios.get(
+      `${API_URL}/${this.state.currency}/sortByHighAsc`
+    );
 
     this.setState({
       data: results.data.data,
@@ -69,7 +77,9 @@ export default class BtcPriceApp extends Component {
 
   // LOW
   sortByLowDesc = async () => {
-    const results = await axios.get(`${API_URL}/sortByLowDesc`);
+    const results = await axios.get(
+      `${API_URL}/${this.state.currency}/sortByLowDesc`
+    );
 
     this.setState({
       data: results.data.data,
@@ -77,7 +87,9 @@ export default class BtcPriceApp extends Component {
   };
 
   sortByLowAsc = async () => {
-    const results = await axios.get(`${API_URL}/sortByLowAsc`);
+    const results = await axios.get(
+      `${API_URL}/${this.state.currency}/sortByLowAsc`
+    );
 
     this.setState({
       data: results.data.data,
@@ -86,7 +98,9 @@ export default class BtcPriceApp extends Component {
 
   // OPEN
   sortByOpenDesc = async () => {
-    const results = await axios.get(`${API_URL}/sortByOpenDesc`);
+    const results = await axios.get(
+      `${API_URL}/${this.state.currency}/sortByOpenDesc`
+    );
 
     this.setState({
       data: results.data.data,
@@ -94,7 +108,9 @@ export default class BtcPriceApp extends Component {
   };
 
   sortByOpenAsc = async () => {
-    const results = await axios.get(`${API_URL}/sortByOpenAsc`);
+    const results = await axios.get(
+      `${API_URL}/${this.state.currency}/sortByOpenAsc`
+    );
 
     this.setState({
       data: results.data.data,
@@ -103,7 +119,9 @@ export default class BtcPriceApp extends Component {
 
   // CLOSE
   sortByCloseDesc = async () => {
-    const results = await axios.get(`${API_URL}/sortByCloseDesc`);
+    const results = await axios.get(
+      `${API_URL}/${this.state.currency}/sortByCloseDesc`
+    );
 
     this.setState({
       data: results.data.data,
@@ -111,7 +129,9 @@ export default class BtcPriceApp extends Component {
   };
 
   sortByCloseAsc = async () => {
-    const results = await axios.get(`${API_URL}/sortByCloseAsc`);
+    const results = await axios.get(
+      `${API_URL}/${this.state.currency}/sortByCloseAsc`
+    );
 
     this.setState({
       data: results.data.data,
@@ -120,7 +140,9 @@ export default class BtcPriceApp extends Component {
 
   // VOLUME
   sortByVolumeDesc = async () => {
-    const results = await axios.get(`${API_URL}/sortByVolumeDesc`);
+    const results = await axios.get(
+      `${API_URL}/${this.state.currency}/sortByVolumeDesc`
+    );
 
     this.setState({
       data: results.data.data,
@@ -128,7 +150,9 @@ export default class BtcPriceApp extends Component {
   };
 
   sortByVolumeAsc = async () => {
-    const results = await axios.get(`${API_URL}/sortByVolumeAsc`);
+    const results = await axios.get(
+      `${API_URL}/${this.state.currency}/sortByVolumeAsc`
+    );
 
     this.setState({
       data: results.data.data,
@@ -140,9 +164,13 @@ export default class BtcPriceApp extends Component {
   }
 
   selectCurrency = (e) => {
-    this.setState({
-      currency: e.target.value,
-    });
+    this.setState(
+      {
+        currency: e.target.value,
+      },
+      () => this.sortByTimeDesc()
+    );
+
     console.log(this.state.currency);
   };
 
@@ -163,7 +191,15 @@ export default class BtcPriceApp extends Component {
           currency={this.state.currency}
           selectCurrency={this.selectCurrency}
         />
-        <CSVLink data={this.state.data} headers={headers}>
+        <CSVLink
+          data={this.state.data}
+          headers={headers}
+          filename={`${this.state.currency}${new Date()
+            .toDateString()
+            .slice(3, 15)
+            .split(' ')
+            .join('_')}.csv`}
+        >
           <button className="csv-btn">Download CSV</button>
         </CSVLink>
 
