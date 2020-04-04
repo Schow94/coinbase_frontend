@@ -16,7 +16,8 @@ export default class Table extends Component {
 
     // console.log(date);
     return (
-      <tr style={{ backgroundColor: day.id % 2 === 0 ? '#f5f5f5' : 'white' }}>
+      //Inline style overrides the hover effect
+      <tr className={day.id % 2 === 0 ? 'evenRow' : 'oddRow'}>
         <td>{dateStr}</td>
         <td>{day.high}</td>
         <td>{day.low}</td>

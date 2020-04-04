@@ -13,15 +13,62 @@ thead {
   border-radius: 30px;
 }
 
+.table-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
 th {
-  padding: 1em;
+  padding: 0.6em;
+  background-color: #d2e2fc;
 }
 
 td {
-  padding: 1em;
+  padding: 0.6em;
 }
 
 table {
   width: 80%;
   margin-left: 10%;
+}
+
+i {
+  background-color: #d2e2fc;
+}
+
+#rating-up {
+  border: none;
+  background-color: #d2e2fc;
+}
+
+#rating-down {
+  border: none;
+  background-color: #d2e2fc;
+}
+
+.chevrons {
+  display: flex;
+  flex-direction: column;
+  width: 2em;
+  margin-left: 0.5em;
+}
+
+button {
+  outline: none;
+  border: none;
+}
+
+button:hover {
+  outline: none;
+  border: none;
+}
+
+#rating-up:hover {
+  cursor: pointer;
+}
+
+#rating-down:hover {
+  cursor: pointer;
 }

@@ -10,12 +10,84 @@ export default class Table extends Component {
       <table>
         <thead>
           <tr>
-            <th>Time</th>
-            <th>Day</th>
-            <th>Low</th>
-            <th>Open</th>
-            <th>Close</th>
-            <th>Volume</th>
+            <th>
+              <div className="table-header">
+                Time
+                <span className="chevrons">
+                  <button id="rating-up">
+                    <i className="fa fa-chevron-up"></i>
+                  </button>
+                  <button id="rating-down">
+                    <i className="fa fa-chevron-down"></i>
+                  </button>
+                </span>
+              </div>
+            </th>
+            <th>
+              <div className="table-header">
+                High
+                <span className="chevrons">
+                  <button id="rating-up">
+                    <i className="fa fa-chevron-up"></i>
+                  </button>
+                  <button id="rating-down">
+                    <i className="fa fa-chevron-down"></i>
+                  </button>
+                </span>
+              </div>
+            </th>
+            <th>
+              <div className="table-header">
+                Low
+                <span className="chevrons">
+                  <button id="rating-up">
+                    <i className="fa fa-chevron-up"></i>
+                  </button>
+                  <button id="rating-down">
+                    <i className="fa fa-chevron-down"></i>
+                  </button>
+                </span>
+              </div>
+            </th>
+            <th>
+              <div className="table-header">
+                Open
+                <span className="chevrons">
+                  <button id="rating-up">
+                    <i className="fa fa-chevron-up"></i>
+                  </button>
+                  <button id="rating-down">
+                    <i className="fa fa-chevron-down"></i>
+                  </button>
+                </span>
+              </div>
+            </th>
+            <th>
+              <div className="table-header">
+                Close
+                <span className="chevrons">
+                  <button id="rating-up">
+                    <i className="fa fa-chevron-up"></i>
+                  </button>
+                  <button id="rating-down">
+                    <i className="fa fa-chevron-down"></i>
+                  </button>
+                </span>
+              </div>
+            </th>
+            <th>
+              <div className="table-header">
+                Volume
+                <span className="chevrons">
+                  <button id="rating-up">
+                    <i className="fa fa-chevron-up"></i>
+                  </button>
+                  <button id="rating-down">
+                    <i className="fa fa-chevron-down"></i>
+                  </button>
+                </span>
+              </div>
+            </th>
           </tr>
         </thead>
         <tbody>

@@ -6,3 +6,16 @@
 td {
   text-align: center;
 }
+
+.evenRow {
+  background-color: white;
+}
+
+.oddRow {
+  background-color: #f5f5f5;
+}
+
+tr:hover {
+  background-color: grey;
+  cursor: pointer;
+}
