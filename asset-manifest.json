@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/coinbase_frontend/static/css/main.31edc9bf.chunk.css",
-    "main.js": "/coinbase_frontend/static/js/main.d4b7a079.chunk.js",
-    "main.js.map": "/coinbase_frontend/static/js/main.d4b7a079.chunk.js.map",
+    "main.js": "/coinbase_frontend/static/js/main.4f2d594d.chunk.js",
+    "main.js.map": "/coinbase_frontend/static/js/main.4f2d594d.chunk.js.map",
     "runtime-main.js": "/coinbase_frontend/static/js/runtime-main.a7bdf883.js",
     "runtime-main.js.map": "/coinbase_frontend/static/js/runtime-main.a7bdf883.js.map",
     "static/js/2.714ca475.chunk.js": "/coinbase_frontend/static/js/2.714ca475.chunk.js",
     "static/js/2.714ca475.chunk.js.map": "/coinbase_frontend/static/js/2.714ca475.chunk.js.map",
     "index.html": "/coinbase_frontend/index.html",
-    "precache-manifest.c06f36d2042f1c0188af14a1d8bd4213.js": "/coinbase_frontend/precache-manifest.c06f36d2042f1c0188af14a1d8bd4213.js",
+    "precache-manifest.40e82b42e911b01ecea013bf5dd65d59.js": "/coinbase_frontend/precache-manifest.40e82b42e911b01ecea013bf5dd65d59.js",
     "service-worker.js": "/coinbase_frontend/service-worker.js",
     "static/css/main.31edc9bf.chunk.css.map": "/coinbase_frontend/static/css/main.31edc9bf.chunk.css.map",
     "static/js/2.714ca475.chunk.js.LICENSE.txt": "/coinbase_frontend/static/js/2.714ca475.chunk.js.LICENSE.txt"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.a7bdf883.js",
     "static/js/2.714ca475.chunk.js",
     "static/css/main.31edc9bf.chunk.css",
-    "static/js/main.d4b7a079.chunk.js"
+    "static/js/main.4f2d594d.chunk.js"
   ]
 }
