@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { CSVLink } from 'react-csv';
+
 import Table from './Table';
 import SelectForm from './SelectForm';
 import './BitPriceApp.css';
@@ -145,6 +147,15 @@ export default class BtcPriceApp extends Component {
   };
 
   render() {
+    const headers = [
+      { label: 'Time', key: 'time' },
+      { label: 'High', key: 'high' },
+      { label: 'Low', key: 'low' },
+      { label: 'Open', key: 'open' },
+      { label: 'Close', key: 'close' },
+      { label: 'Volume', key: 'volume' },
+    ];
+
     return (
       <div className="container">
         <h1 className="title">{this.state.currency} Historical Rates</h1>
@@ -152,9 +163,10 @@ export default class BtcPriceApp extends Component {
           currency={this.state.currency}
           selectCurrency={this.selectCurrency}
         />
-        <button className="csv-btn" onClick={() => alert('Not quite ready')}>
-          Download CSV
-        </button>
+        <CSVLink data={this.state.data} headers={headers}>
+          <button className="csv-btn">Download CSV</button>
+        </CSVLink>
+
         <Table
           btcData={this.state.data}
           sortByTimeDesc={this.sortByTimeDesc}
