@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Table from './Table';
+import './BitPriceApp.css';
 
 import axios from 'axios';
 
@@ -26,8 +27,8 @@ export default class BtcPriceApp extends Component {
 
   render() {
     return (
-      <div>
-        <h1>Bitcoin Historical Rates:</h1>
+      <div className="container">
+        <h1 className="title">Bitcoin Historical Rates</h1>
         <Table btcData={this.state.data} />
       </div>
     );

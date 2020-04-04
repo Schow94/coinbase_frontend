@@ -4,31 +4,26 @@ import './Day.css';
 export default class Table extends Component {
   render() {
     const { day } = this.props;
+
+    const unixTime = day.time;
+    var dateObj = new Date(unixTime * 1000);
+    var dateStr = dateObj.toString().slice(3, 15);
+    // var hours = date.getHours();
+    // var minutes = '0' + date.getMinutes;
+    // var seconds = '0' + date.getSeconds();
+    // var formattedTime =
+    //   hours + ':' + minutes.substr(-2) + ':' + seconds.substr(-2);
+
+    // console.log(date);
     return (
-      <div>
-        <ul className="one-day">
-          <li>
-            <b>Time </b>: {day.time}
-          </li>
-          <li>
-            <b>Day: </b> {day.high}
-          </li>
-          <li>
-            <b>Low: </b> {day.low}
-          </li>
-          <li>
-            <b>Open: </b>
-            {day.open}
-          </li>
-          <li>
-            <b>Close:</b> {day.close}
-          </li>
-          <li>
-            <b>Volume: </b> {day.volume}
-          </li>
-        </ul>
-        <hr />
-      </div>
+      <tr style={{ backgroundColor: day.id % 2 === 0 ? '#f5f5f5' : 'white' }}>
+        <td>{dateStr}</td>
+        <td>{day.high}</td>
+        <td>{day.low}</td>
+        <td>{day.open}</td>
+        <td>{day.close}</td>
+        <td>{day.volume}</td>
+      </tr>
     );
   }
 }

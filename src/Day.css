@@ -3,6 +3,6 @@
   flex-direction: row;
 }
 
-ul {
-  list-style-type: none;
+td {
+  text-align: center;
 }
