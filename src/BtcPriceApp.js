@@ -4,6 +4,7 @@ import { CSVLink } from 'react-csv';
 import Table from './Table';
 import SelectForm from './SelectForm';
 import Graph1 from './Graph1';
+import ItemToShowOnGraph from './ItemToShowOnGraph';
 import './BitPriceApp.css';
 
 import axios from 'axios';
@@ -17,6 +18,7 @@ export default class BtcPriceApp extends Component {
       data: [],
       currency: 'bitcoin',
       dataForGraph: [],
+      graphSelected: 'close',
     };
 
     //Binding API call fxns
@@ -42,12 +44,9 @@ export default class BtcPriceApp extends Component {
       `${API_URL}/${this.state.currency}/sortByTimeDesc`
     );
 
-    this.setState(
-      {
-        data: results.data.data,
-      },
-      () => this.processData()
-    );
+    this.setState({
+      data: results.data.data,
+    });
   };
 
   sortByTimeAsc = async () => {
@@ -165,24 +164,14 @@ export default class BtcPriceApp extends Component {
     });
   };
 
-  //Processes Data for Graph Format
-  processData = () => {
-    const working = this.state.data.slice(0, 20);
-    const processed = working.map((obj, i) => {
-      let box = {};
-      box['name'] = i;
-      box['y'] = obj.close;
-      return box;
-    });
-
-    this.setState({
-      dataForGraph: processed,
-    });
-    console.log(this.state.dataForGraph);
-  };
-
   componentDidMount() {
+    console.log('Component Did Mount');
     this.sortByTimeDesc();
+  }
+
+  componentDidUpdate() {
+    console.log('Component did update');
+    //Function calls repeatedly
   }
 
   selectCurrency = (e) => {
@@ -192,11 +181,17 @@ export default class BtcPriceApp extends Component {
       },
       () => this.sortByTimeDesc()
     );
+  };
 
-    console.log(this.state.currency);
+  onGraphChange = (selectVal) => {
+    this.setState({
+      graphSelected: selectVal,
+    });
   };
 
   render() {
+    // console.log(this.state.bitcoin);
+
     //Headers of CSV
     const headers = [
       { label: 'Time', key: 'time' },
@@ -225,8 +220,14 @@ export default class BtcPriceApp extends Component {
         >
           <button className="csv-btn">Download CSV</button>
         </CSVLink>
-
-        <Graph1 currency={this.state.currency} graphData={this.state.data} />
+        <ItemToShowOnGraph
+          graphSelected={this.state.graphSelected}
+          onGraphChange={this.onGraphChange}
+        />
+        <Graph1
+          graphData={this.state.data}
+          graphSelected={this.state.graphSelected}
+        />
         <Table
           btcData={this.state.data}
           sortByTimeDesc={this.sortByTimeDesc}

@@ -15,62 +15,87 @@ import './Graph1.css';
 
 export default class Graph1 extends Component {
   render() {
-    const { graphData, currency } = this.props;
+    const { graphData, graphSelected } = this.props;
 
-    //Sort of Dynamically set yAxis so graph changes with max data points
-    let yAxisDomain = 0;
+    let yAxisDomain;
+    let highest;
     const setYAxisDomain = () => {
-      if (currency === 'bitcoin') {
-        yAxisDomain = 15000;
-      } else if (currency === 'litecoin') {
-        yAxisDomain = 180;
-      } else if (currency === 'ethereum') {
-        yAxisDomain = 400;
+      if (graphSelected === 'high') {
+        return <YAxis dataKey="high" domain={[0, Math.ceil(high * 1.1)]} />;
+      } else if (graphSelected === 'low') {
+        return <YAxis dataKey="low" domain={[0, Math.ceil(low * 1.1)]} />;
+      } else if (graphSelected === 'open') {
+        return <YAxis dataKey="open" domain={[0, Math.ceil(open * 1.1)]} />;
+      } else if (graphSelected === 'close') {
+        return <YAxis dataKey="close" domain={[0, Math.ceil(close * 1.1)]} />;
+      } else if (graphSelected === 'volume') {
+        return <YAxis dataKey="volume" domain={[0, Math.ceil(volume) * 1.1]} />;
       }
-      console.log('DOMAIN: ', yAxisDomain);
     };
+
+    var high = (function () {
+      let max = 0;
+      for (let i = 0; i < graphData.length; i++) {
+        if (graphData[i]['high'] > max) {
+          max = parseFloat(graphData[i]['high']);
+        }
+      }
+      return max;
+    })();
+
+    var low = (function () {
+      let max = 0;
+      for (let i = 0; i < graphData.length; i++) {
+        if (graphData[i]['low'] > max) {
+          max = parseFloat(graphData[i]['low']);
+        }
+      }
+      return max;
+    })();
+
+    var open = (function () {
+      let max = 0;
+      for (let i = 0; i < graphData.length; i++) {
+        if (graphData[i]['open'] > max) {
+          max = parseFloat(graphData[i]['open']);
+        }
+      }
+      return max;
+    })();
+
+    var close = (function () {
+      let max = 0;
+      for (let i = 0; i < graphData.length; i++) {
+        if (graphData[i]['close'] > max) {
+          max = parseFloat(graphData[i]['close']);
+        }
+      }
+      return max;
+    })();
+
+    var volume = (function () {
+      let max = 0;
+      for (let i = 0; i < graphData.length; i++) {
+        if (parseFloat(graphData[i]['volume']) > max) {
+          max = parseFloat(graphData[i]['volume']);
+        }
+      }
+      return max;
+    })();
+
     setYAxisDomain();
 
     return (
       <ResponsiveContainer className="graph-container" width="80%" height={400}>
-        <LineChart
-          data={graphData}
-          // margin={{ top: 5, right: 30, left: 20, bottom: 5 }}
-        >
+        <LineChart data={graphData}>
           <XAxis />
-          {/* Add some code to dynamically render height */}
-          <YAxis dataKey="close" domain={[0, yAxisDomain]} />
+          {setYAxisDomain()}
           <Legend />
           <Tooltip />
           {/* <CartesianGrid stroke="#ccc" /> */}
-          {/* <Line
-            type="monotone"
-            dataKey="high"
-            stroke="red"
-            activeDot={{ r: 5 }}
-          /> */}
-          {/* <Line
-            type="monotone"
-            dataKey="open"
-            stroke="blue"
-            activeDot={{ r: 5 }}
-          /> */}
-          {/* <Line
-            type="monotone"
-            dataKey="low"
-            stroke="green"
-            activeDot={{ r: 5 }}
-          /> */}
-          {/* <Line
-            type="monotone"
-            dataKey="volume"
-            stroke="black"
-            activeDot={{ r: 5 }}
-          /> */}
-
           <Line
             type="monotone"
-            dataKey="close"
+            dataKey={graphSelected}
             stroke="#3285fa"
             activeDot={{ r: 5 }}
           />
