@@ -1,17 +1,22 @@
-table,
 th,
 td {
-  border: 1px solid black;
+  border: 0.1em solid black;
 }
 
 table {
   border-collapse: collapse;
   margin-top: 1em;
+  border: 0.1em solid black;
+  width: 80%;
+  margin-left: 10%;
+  position: relative;
+  /* display: flex;
+  flex-direction: column; */
 }
 
 thead {
   border: 1px solid black;
-  border-radius: 30px;
+  /* border-radius: 30px; */
 }
 
 .table-header {
@@ -28,11 +33,6 @@ th {
 
 td {
   padding: 0.6em;
-}
-
-table {
-  width: 80%;
-  margin-left: 10%;
 }
 
 i {
@@ -52,6 +52,7 @@ i {
 .chevrons {
   display: flex;
   flex-direction: column;
+  color: grey;
   width: 2em;
   margin-left: 0.5em;
 }
@@ -68,8 +69,10 @@ button:hover {
 
 #rating-up:hover {
   cursor: pointer;
+  color: black;
 }
 
 #rating-down:hover {
   cursor: pointer;
+  color: black;
 }

@@ -9,6 +9,7 @@ import {
   Legend,
   ResponsiveContainer,
   ReferenceArea,
+  Label,
 } from 'recharts';
 
 import './Graph1.css';
@@ -21,15 +22,65 @@ export default class Graph1 extends Component {
     let highest;
     const setYAxisDomain = () => {
       if (graphSelected === 'high') {
-        return <YAxis dataKey="high" domain={[0, Math.ceil(high * 1.1)]} />;
+        return (
+          <YAxis dataKey="high" domain={[0, Math.ceil(high * 1.1)]}>
+            <Label
+              value="high"
+              offset={1}
+              position="left"
+              angle={-90}
+              dx={-10}
+            />
+          </YAxis>
+        );
       } else if (graphSelected === 'low') {
-        return <YAxis dataKey="low" domain={[0, Math.ceil(low * 1.1)]} />;
+        return (
+          <YAxis dataKey="low" domain={[0, Math.ceil(low * 1.1)]}>
+            <Label
+              value="low"
+              offset={1}
+              position="left"
+              angle={-90}
+              dx={-10}
+            />
+          </YAxis>
+        );
       } else if (graphSelected === 'open') {
-        return <YAxis dataKey="open" domain={[0, Math.ceil(open * 1.1)]} />;
+        return (
+          <YAxis dataKey="open" domain={[0, Math.ceil(open * 1.1)]}>
+            <Label
+              value="open"
+              offset={1}
+              position="left"
+              angle={-90}
+              dx={-10}
+            />
+          </YAxis>
+        );
       } else if (graphSelected === 'close') {
-        return <YAxis dataKey="close" domain={[0, Math.ceil(close * 1.1)]} />;
+        return (
+          <YAxis dataKey="close" domain={[0, Math.ceil(close * 1.1)]}>
+            <Label
+              value="close"
+              offset={1}
+              position="left"
+              angle={-90}
+              dx={-10}
+            />
+          </YAxis>
+        );
       } else if (graphSelected === 'volume') {
-        return <YAxis dataKey="volume" domain={[0, Math.ceil(volume) * 1.1]} />;
+        return (
+          <YAxis dataKey="volume" domain={[0, Math.ceil(volume) * 1.1]}>
+            <Label
+              value="volume"
+              offset={1}
+              position="left"
+              angle={-90}
+              dx={-10}
+            />
+          </YAxis>
+        );
       }
     };
 
@@ -87,10 +138,21 @@ export default class Graph1 extends Component {
 
     return (
       <ResponsiveContainer className="graph-container" width="80%" height={400}>
-        <LineChart data={graphData}>
-          <XAxis />
+        <LineChart
+          data={graphData}
+          margin={{ top: 20, right: 10, left: 20, bottom: 40 }}
+        >
+          >
+          <XAxis dataKey="graphDate" interval={20}>
+            <Label
+              value="month-year"
+              offset={1}
+              position="insideBottom"
+              dy={20}
+            />
+          </XAxis>
           {setYAxisDomain()}
-          <Legend />
+          {/* <Legend /> */}
           <Tooltip />
           {/* <CartesianGrid stroke="#ccc" /> */}
           <Line

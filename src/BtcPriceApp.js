@@ -19,6 +19,7 @@ export default class BtcPriceApp extends Component {
       currency: 'bitcoin',
       dataForGraph: [],
       graphSelected: 'close',
+      csvData: [],
     };
 
     //Binding API call fxns
@@ -44,8 +45,34 @@ export default class BtcPriceApp extends Component {
       `${API_URL}/${this.state.currency}/sortByTimeDesc`
     );
 
+    //Formatting & Save data to state for CSV
+    const csvData = results.data.data.map((val) => {
+      let obj = { ...val };
+      let date = new Date(obj['time'] * 1000);
+
+      let month = (date.getMonth() + 1).toString();
+      let day = date.getDate().toString();
+      let year = date.getFullYear().toString();
+
+      //Spacers for months with a single digit
+      let dayZero = day.length < 2 ? '-0' : '-';
+      let monthZero = month.length < 2 ? '-0' : '-';
+
+      let formattedDate = `${year}${monthZero}${month}${dayZero}${day}`;
+
+      obj['timestamp'] = formattedDate;
+      obj['graphDate'] = `${month}-${year.slice(0, 2)}`;
+      obj['day'] = day;
+      obj['month'] = month;
+      obj['year'] = year;
+      obj['year-month'] = `${year}-${month}`;
+
+      return obj;
+    });
+
     this.setState({
       data: results.data.data,
+      csvData: csvData,
     });
   };
 
@@ -191,10 +218,11 @@ export default class BtcPriceApp extends Component {
 
   render() {
     // console.log(this.state.bitcoin);
+    console.log('CSV Data: ', this.state.csvData);
 
     //Headers of CSV
     const headers = [
-      { label: 'Time', key: 'time' },
+      { label: 'Timestamp', key: 'timestamp' },
       { label: 'High', key: 'high' },
       { label: 'Low', key: 'low' },
       { label: 'Open', key: 'open' },
@@ -209,8 +237,10 @@ export default class BtcPriceApp extends Component {
           currency={this.state.currency}
           selectCurrency={this.selectCurrency}
         />
+
         <CSVLink
-          data={this.state.data}
+          className="csv-btn"
+          data={this.state.csvData}
           headers={headers}
           filename={`${this.state.currency}${new Date()
             .toDateString()
@@ -218,14 +248,15 @@ export default class BtcPriceApp extends Component {
             .split(' ')
             .join('_')}.csv`}
         >
-          <button className="csv-btn">Download CSV</button>
+          Download CSV
         </CSVLink>
+
         <ItemToShowOnGraph
           graphSelected={this.state.graphSelected}
           onGraphChange={this.onGraphChange}
         />
         <Graph1
-          graphData={this.state.data}
+          graphData={this.state.csvData}
           graphSelected={this.state.graphSelected}
         />
         <Table

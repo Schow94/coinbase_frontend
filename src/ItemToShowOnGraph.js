@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './ItemToShowOnGraph.css';
 
 export default class ItemToShowOnGraph extends Component {
   handleChange = (e) => {
@@ -8,9 +9,10 @@ export default class ItemToShowOnGraph extends Component {
   render() {
     const { graphSelected } = this.props;
     return (
-      <div>
+      <div className="graph-params">
         <label htmlFor="graphParam">Graph Parameter:</label>
         <select
+          className="select"
           id="graphParam"
           value={graphSelected}
           onChange={(e) => this.handleChange(e)}
