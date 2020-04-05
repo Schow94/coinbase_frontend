@@ -3,6 +3,7 @@ import { CSVLink } from 'react-csv';
 
 import Table from './Table';
 import SelectForm from './SelectForm';
+import Graph1 from './Graph1';
 import './BitPriceApp.css';
 
 import axios from 'axios';
@@ -15,9 +16,11 @@ export default class BtcPriceApp extends Component {
     this.state = {
       data: [],
       currency: 'bitcoin',
+      dataForGraph: [],
     };
 
     //Binding API call fxns
+    // this.processData = this.processData.bind(this);
     this.sortByTimeDesc = this.sortByTimeDesc.bind(this);
     this.sortByTimeAsc = this.sortByTimeAsc.bind(this);
     this.sortByHighDesc = this.sortByHighDesc.bind(this);
@@ -39,9 +42,12 @@ export default class BtcPriceApp extends Component {
       `${API_URL}/${this.state.currency}/sortByTimeDesc`
     );
 
-    this.setState({
-      data: results.data.data,
-    });
+    this.setState(
+      {
+        data: results.data.data,
+      },
+      () => this.processData()
+    );
   };
 
   sortByTimeAsc = async () => {
@@ -159,6 +165,22 @@ export default class BtcPriceApp extends Component {
     });
   };
 
+  //Processes Data for Graph Format
+  processData = () => {
+    const working = this.state.data.slice(0, 20);
+    const processed = working.map((obj, i) => {
+      let box = {};
+      box['name'] = i;
+      box['y'] = obj.close;
+      return box;
+    });
+
+    this.setState({
+      dataForGraph: processed,
+    });
+    console.log(this.state.dataForGraph);
+  };
+
   componentDidMount() {
     this.sortByTimeDesc();
   }
@@ -175,6 +197,7 @@ export default class BtcPriceApp extends Component {
   };
 
   render() {
+    //Headers of CSV
     const headers = [
       { label: 'Time', key: 'time' },
       { label: 'High', key: 'high' },
@@ -203,6 +226,7 @@ export default class BtcPriceApp extends Component {
           <button className="csv-btn">Download CSV</button>
         </CSVLink>
 
+        <Graph1 currency={this.state.currency} graphData={this.state.data} />
         <Table
           btcData={this.state.data}
           sortByTimeDesc={this.sortByTimeDesc}

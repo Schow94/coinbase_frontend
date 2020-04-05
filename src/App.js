@@ -1,8 +1,14 @@
 import React from 'react';
 import BtcPriceApp from './BtcPriceApp';
+import Navbar from './Navbar';
 
 function App() {
-  return <BtcPriceApp />;
+  return (
+    <>
+      {/* <Navbar /> */}
+      <BtcPriceApp />
+    </>
+  );
 }
 
 export default App;
