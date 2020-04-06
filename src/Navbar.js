@@ -9,13 +9,13 @@ export default class Navbar extends Component {
       <nav className="navbar">
         <ul className="nav-list">
           <li>
-            <Link to="/">Home</Link>
+            <Link to={`${process.env.PUBLIC_URL}/`}>Home</Link>
           </li>
           <li>
-            <Link to="/about">About</Link>
+            <Link to={`${process.env.PUBLIC_URL}/about`}>About</Link>
           </li>
           <li>
-            <Link to="/historic">Historic</Link>
+            <Link to={`${process.env.PUBLIC_URL}/historic`}>Historic</Link>
           </li>
         </ul>
       </nav>

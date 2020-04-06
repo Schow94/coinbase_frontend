@@ -12,9 +12,17 @@ function App() {
     <Router basename="/">
       <Navbar />
       <Switch>
-        <Route exact path="/" component={Home} />
-        <Route exact path="/about" component={About} />
-        <Route exact path="/historic" component={BtcPriceApp} />
+        <Route exact path={`${process.env.PUBLIC_URL}/`} component={Home} />
+        <Route
+          exact
+          path={`${process.env.PUBLIC_URL}/about`}
+          component={About}
+        />
+        <Route
+          exact
+          path={`${process.env.PUBLIC_URL}/historic`}
+          component={BtcPriceApp}
+        />
       </Switch>
     </Router>
   );
