@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/coinbase_frontend/precache-manifest.9ae17cd08ca32194a2d6184700b9ab40.js"
+  "/coinbase_frontend/precache-manifest.c5754b99ae597923db48e3302b8bc596.js"
 );
 
 self.addEventListener('message', (event) => {
