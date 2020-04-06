@@ -40,7 +40,7 @@ import './SelectForm.css';
 
 export default class SelectForm extends Component {
   handleChange = (e) => {
-    this.props.onGraphChange(e.target.value);
+    this.props.selectCurrency(e.target.value);
   };
 
   render() {

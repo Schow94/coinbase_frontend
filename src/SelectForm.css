@@ -4,7 +4,13 @@
   width: 10%;
 }
 
+select {
+  height: 15%;
+}
+
 .select {
-  height: 10%;
   line-height: 10%;
+  margin-top: 1em;
+  /* font-size: 1em; */
+  /* margin-bottom: 1em; */
 }

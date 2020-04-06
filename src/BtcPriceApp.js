@@ -201,10 +201,10 @@ export default class BtcPriceApp extends Component {
     //Function calls repeatedly
   }
 
-  selectCurrency = (e) => {
+  selectCurrency = (inputVal) => {
     this.setState(
       {
-        currency: e.target.value,
+        currency: inputVal,
       },
       () => this.sortByTimeDesc()
     );
@@ -218,7 +218,7 @@ export default class BtcPriceApp extends Component {
 
   render() {
     // console.log(this.state.bitcoin);
-    console.log('CSV Data: ', this.state.csvData);
+    // console.log('CSV Data: ', this.state.csvData);
 
     //Headers of CSV
     const headers = [
@@ -233,28 +233,28 @@ export default class BtcPriceApp extends Component {
     return (
       <div className="container">
         <h1 className="title">{this.state.currency} Historical Rates</h1>
-        <SelectForm
-          currency={this.state.currency}
-          selectCurrency={this.selectCurrency}
-        />
-
-        <CSVLink
-          className="csv-btn"
-          data={this.state.csvData}
-          headers={headers}
-          filename={`${this.state.currency}${new Date()
-            .toDateString()
-            .slice(3, 15)
-            .split(' ')
-            .join('_')}.csv`}
-        >
-          Download CSV
-        </CSVLink>
-
-        <ItemToShowOnGraph
-          graphSelected={this.state.graphSelected}
-          onGraphChange={this.onGraphChange}
-        />
+        <div className="options-container">
+          <SelectForm
+            currency={this.state.currency}
+            selectCurrency={this.selectCurrency}
+          />
+          <ItemToShowOnGraph
+            graphSelected={this.state.graphSelected}
+            onGraphChange={this.onGraphChange}
+          />
+          <CSVLink
+            className="csv-btn"
+            data={this.state.csvData}
+            headers={headers}
+            filename={`${this.state.currency}${new Date()
+              .toDateString()
+              .slice(3, 15)
+              .split(' ')
+              .join('_')}.csv`}
+          >
+            Download CSV
+          </CSVLink>
+        </div>
         <Graph1
           graphData={this.state.csvData}
           graphSelected={this.state.graphSelected}
