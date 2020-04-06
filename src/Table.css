@@ -10,8 +10,7 @@ table {
   width: 80%;
   margin-left: 10%;
   position: relative;
-  /* display: flex;
-  flex-direction: column; */
+  color: black;
 }
 
 thead {

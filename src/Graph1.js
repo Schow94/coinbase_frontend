@@ -156,6 +156,7 @@ export default class Graph1 extends Component {
           <Tooltip />
           {/* <CartesianGrid stroke="#ccc" /> */}
           <Line
+            dot={false}
             type="monotone"
             dataKey={graphSelected}
             stroke="#3285fa"

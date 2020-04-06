@@ -5,6 +5,8 @@
 }
 
 .container {
+  position: relative;
+  margin-top: 5%;
   font-family: 'Open Sans', sans-serif;
   display: flex;
   flex-direction: column;
