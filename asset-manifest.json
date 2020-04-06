@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/coinbase_frontend/static/css/main.30b4d665.chunk.css",
-    "main.js": "/coinbase_frontend/static/js/main.033df6a1.chunk.js",
-    "main.js.map": "/coinbase_frontend/static/js/main.033df6a1.chunk.js.map",
+    "main.css": "/coinbase_frontend/static/css/main.e08d9c37.chunk.css",
+    "main.js": "/coinbase_frontend/static/js/main.539a2bdc.chunk.js",
+    "main.js.map": "/coinbase_frontend/static/js/main.539a2bdc.chunk.js.map",
     "runtime-main.js": "/coinbase_frontend/static/js/runtime-main.a7bdf883.js",
     "runtime-main.js.map": "/coinbase_frontend/static/js/runtime-main.a7bdf883.js.map",
-    "static/js/2.d61006a5.chunk.js": "/coinbase_frontend/static/js/2.d61006a5.chunk.js",
-    "static/js/2.d61006a5.chunk.js.map": "/coinbase_frontend/static/js/2.d61006a5.chunk.js.map",
+    "static/js/2.f7e889ca.chunk.js": "/coinbase_frontend/static/js/2.f7e889ca.chunk.js",
+    "static/js/2.f7e889ca.chunk.js.map": "/coinbase_frontend/static/js/2.f7e889ca.chunk.js.map",
     "index.html": "/coinbase_frontend/index.html",
-    "precache-manifest.2429757d8b3e8173ef789541b1ebb811.js": "/coinbase_frontend/precache-manifest.2429757d8b3e8173ef789541b1ebb811.js",
+    "precache-manifest.6b8062c6fba021b95bddc3d22b4b04fd.js": "/coinbase_frontend/precache-manifest.6b8062c6fba021b95bddc3d22b4b04fd.js",
     "service-worker.js": "/coinbase_frontend/service-worker.js",
-    "static/css/main.30b4d665.chunk.css.map": "/coinbase_frontend/static/css/main.30b4d665.chunk.css.map",
-    "static/js/2.d61006a5.chunk.js.LICENSE.txt": "/coinbase_frontend/static/js/2.d61006a5.chunk.js.LICENSE.txt"
+    "static/css/main.e08d9c37.chunk.css.map": "/coinbase_frontend/static/css/main.e08d9c37.chunk.css.map",
+    "static/js/2.f7e889ca.chunk.js.LICENSE.txt": "/coinbase_frontend/static/js/2.f7e889ca.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.a7bdf883.js",
-    "static/js/2.d61006a5.chunk.js",
-    "static/css/main.30b4d665.chunk.css",
-    "static/js/main.033df6a1.chunk.js"
+    "static/js/2.f7e889ca.chunk.js",
+    "static/css/main.e08d9c37.chunk.css",
+    "static/js/main.539a2bdc.chunk.js"
   ]
 }
