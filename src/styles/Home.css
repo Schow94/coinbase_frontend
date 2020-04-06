@@ -1,0 +1,51 @@
+.home-container {
+  margin-top: 6%;
+  background-color: #1d70f5;
+  font-size: 16px;
+}
+
+.home-title {
+  text-align: center;
+  padding-top: 2em;
+  font-size: 3.5em;
+  color: white;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+.home-desc {
+  text-align: center;
+  /* margin-top: 0; */
+  font-size: 1.2em;
+  color: white;
+}
+
+.get-started-form {
+  display: flex;
+
+  justify-content: center;
+  padding-top: 2em;
+
+  padding-bottom: 2em;
+}
+
+.get-started-input {
+  width: 25%;
+  border: none;
+  border-radius: 6px;
+  padding-left: 1em;
+  font-size: 1em;
+  letter-spacing: 0.2em;
+  color: grey;
+}
+
+.get-started-btn-green {
+  margin-left: 1em;
+  background-color: #5ebf58;
+  font-size: 1em;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  letter-spacing: 0.1em;
+  padding: 2em;
+}

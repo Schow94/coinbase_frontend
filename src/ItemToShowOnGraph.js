@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './ItemToShowOnGraph.css';
+import './styles/ItemToShowOnGraph.css';
 
 export default class ItemToShowOnGraph extends Component {
   handleChange = (e) => {

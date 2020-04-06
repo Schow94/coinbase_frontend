@@ -1,0 +1,66 @@
+.signup-container {
+  margin-top: 6%;
+  background-color: #1d70f5;
+  font-size: 16px;
+  min-height: 780px;
+}
+
+.signup-title {
+  color: white;
+  font-size: 2em;
+  letter-spacing: 5px;
+  text-align: center;
+  padding-top: 1.5em;
+}
+
+.signup-form {
+  background-color: white;
+  min-height: 580px;
+  width: 40%;
+  margin: 0 auto;
+  border-radius: 10px;
+  padding: 1em;
+  text-align: center;
+  /* display: flex;
+  flex-direction: row; */
+}
+
+.signup-form input {
+  font-size: 1.2em;
+  padding: 0.8em;
+  border-radius: 7px;
+  border: 1px solid #e6e6e6;
+  margin: 0.6em;
+  color: grey;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+.email,
+.password {
+  width: 83%;
+}
+
+.checkbox-container {
+  display: block;
+  text-align: left;
+  margin-left: 4%;
+}
+
+.checkbox {
+  display: inline-block;
+  float: left;
+}
+
+.create-account-btn {
+  display: block;
+  background-color: rgb(22, 82, 240);
+  font-size: 1.3em;
+  padding: 1.3em;
+  border-radius: 5px;
+  width: 87%;
+  color: white;
+  margin: 0 auto;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}

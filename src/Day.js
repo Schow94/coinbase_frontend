@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './Day.css';
+import './styles/Day.css';
 
 export default class Table extends Component {
   render() {

@@ -4,8 +4,9 @@ import { CSVLink } from 'react-csv';
 import Table from './Table';
 import SelectForm from './SelectForm';
 import Graph1 from './Graph1';
+import Navbar from './Navbar';
 import ItemToShowOnGraph from './ItemToShowOnGraph';
-import './BitPriceApp.css';
+import './styles/BitPriceApp.css';
 
 import axios from 'axios';
 
@@ -231,50 +232,55 @@ export default class BtcPriceApp extends Component {
     ];
 
     return (
-      <div className="container">
-        <h1 className="title">{this.state.currency} Historical Rates</h1>
-        <div className="options-container">
-          <SelectForm
-            currency={this.state.currency}
-            selectCurrency={this.selectCurrency}
-          />
-          <ItemToShowOnGraph
+      <>
+        <Navbar></Navbar>
+        <div className="container">
+          <h1 className="title">{this.state.currency} Historical Rates</h1>
+          <div className="options-container">
+            <SelectForm
+              currency={this.state.currency}
+              selectCurrency={this.selectCurrency}
+            />
+            <ItemToShowOnGraph
+              graphSelected={this.state.graphSelected}
+              onGraphChange={this.onGraphChange}
+            />
+            <CSVLink
+              className="csv-btn"
+              data={this.state.csvData}
+              headers={headers}
+              filename={`${
+                this.state.currency
+              }${new Date()
+                .toDateString()
+                .slice(3, 15)
+                .split(' ')
+                .join('_')}.csv`}
+            >
+              Download CSV
+            </CSVLink>
+          </div>
+          <Graph1
+            graphData={this.state.csvData}
             graphSelected={this.state.graphSelected}
-            onGraphChange={this.onGraphChange}
           />
-          <CSVLink
-            className="csv-btn"
-            data={this.state.csvData}
-            headers={headers}
-            filename={`${this.state.currency}${new Date()
-              .toDateString()
-              .slice(3, 15)
-              .split(' ')
-              .join('_')}.csv`}
-          >
-            Download CSV
-          </CSVLink>
+          <Table
+            btcData={this.state.data}
+            sortByTimeDesc={this.sortByTimeDesc}
+            sortByTimeAsc={this.sortByTimeAsc}
+            sortByHighDesc={this.sortByHighDesc}
+            sortByHighAsc={this.sortByHighAsc}
+            sortByLowDesc={this.sortByLowDesc}
+            sortByLowAsc={this.sortByLowAsc}
+            sortByOpenDesc={this.sortByOpenDesc}
+            sortByOpenAsc={this.sortByOpenAsc}
+            sortByCloseDesc={this.sortByCloseDesc}
+            sortByCloseAsc={this.sortByCloseAsc}
+            sortByVolumeDesc={this.sortByVolumeDesc}
+            sortByVolumeAsc={this.sortByVolumeAsc}
+          />
         </div>
-        <Graph1
-          graphData={this.state.csvData}
-          graphSelected={this.state.graphSelected}
-        />
-        <Table
-          btcData={this.state.data}
-          sortByTimeDesc={this.sortByTimeDesc}
-          sortByTimeAsc={this.sortByTimeAsc}
-          sortByHighDesc={this.sortByHighDesc}
-          sortByHighAsc={this.sortByHighAsc}
-          sortByLowDesc={this.sortByLowDesc}
-          sortByLowAsc={this.sortByLowAsc}
-          sortByOpenDesc={this.sortByOpenDesc}
-          sortByOpenAsc={this.sortByOpenAsc}
-          sortByCloseDesc={this.sortByCloseDesc}
-          sortByCloseAsc={this.sortByCloseAsc}
-          sortByVolumeDesc={this.sortByVolumeDesc}
-          sortByVolumeAsc={this.sortByVolumeAsc}
-        />
-      </div>
+      </>
     );
   }
 }

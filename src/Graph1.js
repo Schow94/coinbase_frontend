@@ -12,7 +12,7 @@ import {
   Label,
 } from 'recharts';
 
-import './Graph1.css';
+import './styles/Graph1.css';
 
 export default class Graph1 extends Component {
   render() {

@@ -1,16 +1,16 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
+import Login from './Login';
 import BtcPriceApp from './BtcPriceApp';
-import Navbar from './Navbar';
+import SignUp from './SignUp';
 import About from './About';
 import Home from './Home';
-import './App.css';
+import './styles/App.css';
 
 function App() {
   return (
     <Router basename="/">
-      <Navbar />
       <Switch>
         <Route exact path={`${process.env.PUBLIC_URL}/`} component={Home} />
         <Route
@@ -22,6 +22,16 @@ function App() {
           exact
           path={`${process.env.PUBLIC_URL}/historic`}
           component={BtcPriceApp}
+        />
+        <Route
+          exact
+          path={`${process.env.PUBLIC_URL}/login`}
+          component={Login}
+        />
+        <Route
+          exact
+          path={`${process.env.PUBLIC_URL}/signup`}
+          component={SignUp}
         />
       </Switch>
     </Router>

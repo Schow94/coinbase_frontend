@@ -6,11 +6,13 @@
 
 .container {
   position: relative;
-  margin-top: 5%;
+  margin-top: 6%;
   font-family: 'Open Sans', sans-serif;
   display: flex;
   flex-direction: column;
   width: 100%;
+  background-color: black;
+  color: white;
 }
 .options-container {
   display: flex;

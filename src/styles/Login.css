@@ -1,0 +1,77 @@
+.signin-container {
+  margin-top: 6%;
+  background-color: #1d70f5;
+  font-size: 16px;
+  min-height: 700px;
+}
+
+.signin-title {
+  color: white;
+  font-size: 2em;
+  letter-spacing: 5px;
+  text-align: center;
+  padding-top: 1.5em;
+}
+
+.signin-form {
+  background-color: white;
+  min-height: 300px;
+  width: 40%;
+  margin: 0 auto;
+  border-radius: 10px;
+  padding: 1em;
+  text-align: center;
+}
+
+.signin-form input {
+  background-color: #dbe9ff;
+  font-size: 1.2em;
+  padding: 0.8em;
+  border-radius: 7px;
+  border: 1px solid #e6e6e6;
+  margin: 0.4em;
+  color: grey;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+.signin-form p {
+  color: grey;
+  font-size: 0.8em;
+}
+
+.email,
+.password {
+  width: 83%;
+}
+
+.checkbox-container {
+  display: block;
+  text-align: left;
+  margin-left: 4%;
+}
+
+.checkbox {
+  display: inline-block;
+  float: left;
+}
+
+.signin-btn {
+  display: inline-block;
+  background-color: rgb(22, 82, 240);
+  font-size: 1em;
+  padding: 1.1em;
+  border-radius: 5px;
+  width: 22%;
+  color: white;
+  margin: 0 auto;
+  margin-top: 1.5em;
+  margin-bottom: 0.7em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.bottom-div {
+  color: white;
+  text-align: center;
+}
