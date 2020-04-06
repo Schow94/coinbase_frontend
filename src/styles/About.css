@@ -33,3 +33,36 @@
   margin-top: 1.7em;
   border: 0.5px solid #e8eaed;
 }
+
+.brief-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  font-size: 1.2em;
+}
+
+.brief-container {
+  width: 45%;
+}
+
+.brief-section h4 {
+  text-transform: uppercase;
+}
+
+.stat {
+  text-transform: uppercase;
+}
+.stat p {
+  color: grey;
+  margin-top: -1em;
+  padding: 0;
+}
+
+.stat h2 {
+  font-size: 1.5em;
+  color: #4a5cff;
+}
+
+.stats-container {
+  width: 45%;
+}
