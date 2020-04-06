@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "5931f2e28229af0f812adfba49e979c3",
+    "revision": "c830dcb25998a597cdb97af19955255a",
     "url": "/coinbase_frontend/index.html"
   },
   {
-    "revision": "550fae0f77d4d25de8aa",
+    "revision": "f0a711050ef6dc3dd4a6",
     "url": "/coinbase_frontend/static/css/main.679c2667.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/coinbase_frontend/static/js/2.448aaef1.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "550fae0f77d4d25de8aa",
-    "url": "/coinbase_frontend/static/js/main.af531b4c.chunk.js"
+    "revision": "f0a711050ef6dc3dd4a6",
+    "url": "/coinbase_frontend/static/js/main.933d6689.chunk.js"
   },
   {
     "revision": "c5f7e144de846af19620",
