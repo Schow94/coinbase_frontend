@@ -396,20 +396,21 @@
     font-size: 3.4em;
     letter-spacing: 3px;
     margin-top: 2.3em;
-    margin-bottom: 0.9em;
+    margin-bottom: 0.5em;
   }
   .signup-form {
-    width: 40%;
+    width: 30%;
     margin: 0 auto;
     padding: 1em;
-    min-height: 680px;
+    min-height: 600px;
+    margin-bottom: 3em;
   }
   .signup-form input {
     font-size: 1.1em;
     padding: 0.8em;
     margin: 1em;
-    padding-top: 1.5em;
-    padding-bottom: 1.5em;
+    padding-top: 1em;
+    padding-bottom: 1em;
   }
 
   .first-name,
@@ -426,16 +427,15 @@
     font-size: 0.9em;
   }
   .create-account-btn {
-    font-size: 1.4em;
+    font-size: 1.2em;
     padding: 1em;
     border-radius: 5px;
     width: 40%;
-    margin-top: 3em;
+    margin-top: 1.6em;
     margin-bottom: 2em;
   }
   .checkbox-container {
-    margin-top: 2em;
-    margin-left: 4em;
+    margin-top: 1em;
     width: 75%;
   }
 }
