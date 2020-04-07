@@ -1,32 +1,27 @@
 .home-container {
-  margin-top: 6%;
+  position: relative;
   background-color: #1d70f5;
+  width: 100%;
   font-size: 16px;
 }
 
 .home-title {
   text-align: center;
-  padding-top: 2em;
+  /* padding-top: 1em; */
   font-size: 3.5em;
   color: white;
-  padding-bottom: 0;
-  margin-bottom: 0;
 }
 
 .home-desc {
   text-align: center;
-  /* margin-top: 0; */
   font-size: 1.2em;
   color: white;
+  margin: 0 auto;
 }
 
 .get-started-form {
   display: flex;
-
   justify-content: center;
-  padding-top: 2em;
-
-  padding-bottom: 2em;
 }
 
 .get-started-input {
@@ -48,4 +43,303 @@
   border-radius: 8px;
   letter-spacing: 0.1em;
   padding: 2em;
+}
+
+@media only screen and (max-width: 300px) {
+  .home-container {
+    position: absolute;
+    min-height: 100vh;
+    background-color: #1d70f5;
+    width: 100%;
+    font-size: 10px;
+    z-index: 1;
+  }
+
+  .home-title {
+    font-size: 2.5em;
+    padding-top: 1em;
+  }
+  .home-desc {
+    width: 80%;
+    letter-spacing: 0.5px;
+    line-height: 1.5em;
+  }
+  .get-started-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 2em;
+  }
+
+  .get-started-input {
+    width: 80%;
+    display: inline-block;
+    padding-left: 1em;
+    font-size: 1.2em;
+    letter-spacing: 0.2em;
+    height: 40px;
+  }
+
+  .get-started-btn-green {
+    margin-top: 1em;
+    width: 85%;
+    display: inline-block;
+    padding-top: 1.5em;
+    margin-left: -2px;
+    font-size: 1.2em;
+    height: 45px;
+  }
+}
+
+@media only screen and (min-width: 300px) and (max-width: 450px) {
+  .home-container {
+    position: absolute;
+    min-height: 100vh;
+    background-color: #1d70f5;
+    width: 100%;
+    font-size: 10px;
+    z-index: 1;
+  }
+
+  .home-title {
+    font-size: 2.5em;
+    padding-top: 1em;
+  }
+  .home-desc {
+    width: 80%;
+    letter-spacing: 0.5px;
+    line-height: 1.5em;
+  }
+  .get-started-form {
+    padding-top: 2em;
+  }
+
+  .get-started-input {
+    width: 30%;
+    padding-left: 1em;
+    font-size: 0.9em;
+    letter-spacing: 0.2em;
+    height: 40px;
+  }
+
+  .get-started-btn-green {
+    padding-top: 1.5em;
+    padding-bottom: 1.5em;
+    height: 42px;
+  }
+}
+
+@media only screen and (min-width: 450px) and (max-width: 650px) {
+  .home-container {
+    position: absolute;
+    min-height: 100vh;
+    background-color: #1d70f5;
+    width: 100%;
+    font-size: 10px;
+    z-index: 1;
+  }
+
+  .home-title {
+    font-size: 3.5em;
+    padding-top: 0.5em;
+  }
+  .home-desc {
+    width: 80%;
+    font-size: 1.5em;
+    letter-spacing: 0.5px;
+    line-height: 1.8em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+  }
+  .get-started-form {
+    padding-top: 2em;
+  }
+
+  .get-started-input {
+    width: 38%;
+    padding-left: 1em;
+    font-size: 1.5em;
+    letter-spacing: 0.2em;
+    height: 60px;
+  }
+
+  .get-started-btn-green {
+    width: 38%;
+    padding-top: 1.5em;
+    font-size: 1.5em;
+    padding-bottom: 1.5em;
+    height: 63px;
+  }
+}
+
+@media only screen and (min-width: 650px) and (max-width: 800px) {
+  .home-container {
+    position: absolute;
+    min-height: 100vh;
+    background-color: #1d70f5;
+    width: 100%;
+    font-size: 10px;
+    z-index: 1;
+  }
+
+  .home-title {
+    font-size: 3.5em;
+    padding-top: 0.5em;
+  }
+  .home-desc {
+    width: 80%;
+    font-size: 1.5em;
+    letter-spacing: 0.5px;
+    line-height: 1.8em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+  }
+  .get-started-form {
+    padding-top: 2em;
+  }
+
+  .get-started-input {
+    width: 38%;
+    padding-left: 1em;
+    font-size: 1.5em;
+    letter-spacing: 0.2em;
+    height: 60px;
+  }
+
+  .get-started-btn-green {
+    width: 38%;
+    padding-top: 1.5em;
+    font-size: 1.5em;
+    padding-bottom: 1.5em;
+    height: 63px;
+  }
+}
+
+@media only screen and (min-width: 800px) and (max-width: 1000px) {
+  .home-container {
+    position: absolute;
+    min-height: 100vh;
+    background-color: #1d70f5;
+    width: 100%;
+    font-size: 10px;
+    z-index: 1;
+  }
+
+  .home-title {
+    font-size: 5em;
+    padding-top: 0.5em;
+  }
+  .home-desc {
+    width: 80%;
+    font-size: 2.2em;
+    letter-spacing: 0.5px;
+    line-height: 1.8em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+  }
+  .get-started-form {
+    padding-top: 2em;
+  }
+
+  .get-started-input {
+    width: 36%;
+    padding-left: 1em;
+    font-size: 1.5em;
+    letter-spacing: 0.2em;
+    height: 60px;
+  }
+
+  .get-started-btn-green {
+    width: 36%;
+    padding-top: 1.5em;
+    font-size: 1.5em;
+    padding-bottom: 1.5em;
+    height: 63px;
+  }
+}
+
+@media only screen and (min-width: 1000px) and (max-width: 1300px) {
+  .home-container {
+    position: absolute;
+    min-height: 100vh;
+    background-color: #1d70f5;
+    width: 100%;
+    font-size: 10px;
+    z-index: 1;
+  }
+
+  .home-title {
+    font-size: 6em;
+    padding-top: 0.5em;
+  }
+  .home-desc {
+    width: 80%;
+    font-size: 2.7em;
+    letter-spacing: 0.5px;
+    line-height: 1.8em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+  }
+  .get-started-form {
+    padding-top: 2em;
+  }
+
+  .get-started-input {
+    width: 36%;
+    padding-left: 1em;
+    font-size: 2em;
+    letter-spacing: 0.2em;
+    height: 4em;
+  }
+
+  .get-started-btn-green {
+    width: 36%;
+    padding-top: 1.5em;
+    font-size: 2em;
+    padding-bottom: 2.5em;
+    height: 4.1em;
+  }
+}
+
+@media only screen and (min-width: 1300px) {
+  .home-container {
+    position: absolute;
+    min-height: 100vh;
+    background-color: #1d70f5;
+    width: 100%;
+    font-size: 10px;
+    z-index: 1;
+  }
+
+  .home-title {
+    font-size: 6em;
+    padding-top: 0.5em;
+  }
+  .home-desc {
+    width: 80%;
+    font-size: 2.7em;
+    letter-spacing: 0.5px;
+    line-height: 1.8em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+  }
+  .get-started-form {
+    padding-top: 2em;
+  }
+
+  .get-started-input {
+    width: 36%;
+    padding-left: 1em;
+    font-size: 2em;
+    letter-spacing: 0.2em;
+    height: 4em;
+  }
+
+  .get-started-btn-green {
+    width: 36%;
+    padding-top: 1.5em;
+    font-size: 2em;
+    padding-bottom: 2.5em;
+    height: 4.1em;
+  }
 }

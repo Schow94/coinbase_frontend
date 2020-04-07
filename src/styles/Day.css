@@ -19,3 +19,19 @@ tr:hover {
   background-color: grey;
   cursor: pointer;
 }
+
+/* ----------------------------- MEDIA QUERIES ---------------------- */
+@media only screen and (min-width: 300px) and (max-width: 650px) {
+}
+
+@media only screen and (max-width: 300px) {
+}
+
+@media only screen and (min-width: 650px) and (max-width: 1000px) {
+}
+
+@media only screen and (min-width: 1000px) and (max-width: 1300px) {
+}
+
+@media only screen and (min-width: 1300px) {
+}
