@@ -1,20 +1,21 @@
 th,
 td {
-  border: 0.1em solid black;
+  /* border: 0.1em solid white; */
 }
 
 table {
   border-collapse: collapse;
   margin-top: 1em;
-  border: 0.1em solid black;
+  /* border: 0.1em solid black; */
   width: 80%;
   margin-left: 10%;
   position: relative;
-  color: black;
+  /* color: white; */
+  /* color: red; */
 }
 
 thead {
-  border: 1px solid black;
+  border-bottom: 2px solid white;
 }
 
 .table-header {
@@ -26,31 +27,38 @@ thead {
 
 th {
   padding: 0.6em;
-  background-color: #d2e2fc;
+  /* background-color: #d2e2fc; */
+  background-color: none;
 }
 
 td {
   padding: 0.6em;
+  background-color: none;
 }
 
 i {
-  background-color: #d2e2fc;
+  /* background-color: #d2e2fc; */
 }
 
 #rating-up {
   border: none;
-  background-color: #d2e2fc;
+  color: #0373fc;
+  background-color: black;
+  /* background-color: #d2e2fc; */
 }
 
 #rating-down {
   border: none;
-  background-color: #d2e2fc;
+  color: #0373fc;
+  background-color: black;
+
+  /* background-color: #d2e2fc; */
 }
 
 .chevrons {
   display: flex;
   flex-direction: column;
-  color: grey;
+  /* color: grey; */
   width: 2em;
   margin-left: 0.5em;
 }
@@ -67,12 +75,12 @@ button:hover {
 
 #rating-up:hover {
   cursor: pointer;
-  color: black;
+  color: #03bafc;
 }
 
 #rating-down:hover {
   cursor: pointer;
-  color: black;
+  color: #03bafc;
 }
 
 /* -------------------------------- MEDIA QUERIES ------------------- */
@@ -278,5 +286,15 @@ button:hover {
 @media only screen and (min-width: 1000px) and (max-width: 1300px) {
 }
 
-@media only screen and (min-width: 1300px) {
+@media only screen and (min-width: 1300px) and (max-width: 1500px) {
+}
+
+@media only screen and (min-width: 1500px) {
+  table {
+    border-collapse: collapse;
+    margin-top: 1em;
+    width: 80%;
+    margin-left: 10%;
+    position: relative;
+  }
 }

@@ -23,61 +23,91 @@ export default class Graph1 extends Component {
     const setYAxisDomain = () => {
       if (graphSelected === 'high') {
         return (
-          <YAxis dataKey="high" domain={[0, Math.ceil(high * 1.1)]}>
+          <YAxis
+            dataKey="high"
+            domain={[0, Math.ceil(high * 1.1)]}
+            tick={{ fill: 'white', fontSize: 13 }}
+            stroke="white"
+          >
             <Label
               value="high"
               offset={1}
               position="left"
               angle={-90}
               dx={-10}
+              style={{ fill: 'white', fontSize: 13 }}
             />
           </YAxis>
         );
       } else if (graphSelected === 'low') {
         return (
-          <YAxis dataKey="low" domain={[0, Math.ceil(low * 1.1)]}>
+          <YAxis
+            dataKey="low"
+            domain={[0, Math.ceil(low * 1.1)]}
+            tick={{ fill: 'white', fontSize: 13 }}
+            stroke="white"
+          >
             <Label
               value="low"
               offset={1}
               position="left"
               angle={-90}
               dx={-10}
+              style={{ fill: 'white', fontSize: 13 }}
             />
           </YAxis>
         );
       } else if (graphSelected === 'open') {
         return (
-          <YAxis dataKey="open" domain={[0, Math.ceil(open * 1.1)]}>
+          <YAxis
+            dataKey="open"
+            domain={[0, Math.ceil(open * 1.1)]}
+            tick={{ fill: 'white', fontSize: 13 }}
+            stroke="white"
+          >
             <Label
               value="open"
               offset={1}
               position="left"
               angle={-90}
               dx={-10}
+              style={{ fill: 'white', fontSize: 13 }}
             />
           </YAxis>
         );
       } else if (graphSelected === 'close') {
         return (
-          <YAxis dataKey="close" domain={[0, Math.ceil(close * 1.1)]}>
+          <YAxis
+            dataKey="close"
+            domain={[0, Math.ceil(close * 1.1)]}
+            tick={{ fill: 'white', fontSize: 13 }}
+            stroke="white"
+          >
             <Label
               value="close"
               offset={1}
               position="left"
               angle={-90}
               dx={-10}
+              style={{ fill: 'white', fontSize: 13 }}
             />
           </YAxis>
         );
       } else if (graphSelected === 'volume') {
         return (
-          <YAxis dataKey="volume" domain={[0, Math.ceil(volume) * 1.1]}>
+          <YAxis
+            dataKey="volume"
+            domain={[0, Math.ceil(volume) * 1.1]}
+            tick={{ fill: 'white', fontSize: 13 }}
+            stroke="white"
+          >
             <Label
               value="volume"
               offset={1}
               position="left"
               angle={-90}
               dx={-10}
+              style={{ fill: 'white', fontSize: 13 }}
             />
           </YAxis>
         );
@@ -143,12 +173,18 @@ export default class Graph1 extends Component {
           margin={{ top: 20, right: 10, left: 20, bottom: 40 }}
         >
           >
-          <XAxis dataKey="graphDate" interval={20}>
+          <XAxis
+            dataKey="graphDate"
+            interval={20}
+            tick={{ fill: 'white', fontSize: 13 }}
+            stroke="white"
+          >
             <Label
               value="month-year"
               offset={1}
               position="insideBottom"
               dy={20}
+              style={{ fill: 'white', fontSize: 13 }}
             />
           </XAxis>
           {setYAxisDomain()}

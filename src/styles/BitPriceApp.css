@@ -68,13 +68,11 @@
   }
 
   .csv-btn {
-    font-size: 1em;
+    font-size: 0.8em;
   }
 
   .csv-btn:hover {
     font-size: 0.8em;
-    font-weight: 800;
-    font-size: 1em;
   }
 }
 
@@ -95,12 +93,11 @@
   }
 
   .csv-btn {
-    font-size: 1em;
+    font-size: 0.8em;
   }
 
   .csv-btn:hover {
     font-size: 0.8em;
-    font-size: 1em;
   }
 }
 
@@ -122,12 +119,12 @@
   }
 
   .csv-btn {
-    font-size: 1em;
+    font-size: 0.7em;
+    height: 4em;
   }
 
   .csv-btn:hover {
-    font-size: 0.8em;
-    font-size: 1em;
+    font-size: 0.7em;
   }
 }
 
@@ -150,12 +147,12 @@
   }
 
   .csv-btn {
-    font-size: 1em;
+    font-size: 0.7em;
+    height: 4em;
   }
 
   .csv-btn:hover {
-    font-size: 0.8em;
-    font-size: 1em;
+    font-size: 0.7em;
   }
 }
 @media only screen and (min-width: 800px) and (max-width: 1000px) {
@@ -177,12 +174,12 @@
   }
 
   .csv-btn {
-    font-size: 1em;
+    font-size: 0.7em;
+    height: 4em;
   }
 
   .csv-btn:hover {
-    font-size: 0.8em;
-    font-size: 1em;
+    font-size: 0.7em;
   }
 }
 
@@ -205,12 +202,12 @@
   }
 
   .csv-btn {
-    font-size: 1em;
+    font-size: 0.7em;
+    height: 4em;
   }
 
   .csv-btn:hover {
-    font-size: 0.8em;
-    font-size: 1em;
+    font-size: 0.7em;
   }
 }
 
@@ -234,12 +231,12 @@
   }
 
   .csv-btn {
-    font-size: 1em;
+    font-size: 0.7em;
+    height: 4em;
   }
 
   .csv-btn:hover {
-    font-size: 0.8em;
-    font-size: 1em;
+    font-size: 0.7em;
   }
 }
 
@@ -263,11 +260,11 @@
   }
 
   .csv-btn {
-    font-size: 1em;
+    font-size: 0.7em;
+    height: 4em;
   }
 
   .csv-btn:hover {
-    font-size: 0.8em;
-    font-size: 1em;
+    font-size: 0.7em;
   }
 }

@@ -1,43 +1,6 @@
 import React, { Component } from 'react';
 import './styles/SelectForm.css';
 
-// export default class SelectForm extends Component {
-//   render() {
-//     const { selectCurrency, currency } = this.props;
-//     return (
-//       <div className="select-form">
-//         <input
-//           type="radio"
-//           id="bitcoin"
-//           name="currency"
-//           value="bitcoin"
-//           onChange={selectCurrency}
-//           checked={currency === 'bitcoin'}
-//         />
-//         <label htmlFor="male">Bitcoin</label>
-//         <input
-//           type="radio"
-//           id="litecoin"
-//           name="currency"
-//           value="litecoin"
-//           onChange={selectCurrency}
-//           checked={currency === 'litecoin'}
-//         />
-//         <label htmlFor="male">Litecoin</label>
-//         <input
-//           type="radio"
-//           id="ethereum"
-//           name="currency"
-//           value="ethereum"
-//           onChange={selectCurrency}
-//           checked={currency === 'ethereum'}
-//         />
-//         <label htmlFor="male">Ethereum</label>
-//       </div>
-//     );
-//   }
-// }
-
 export default class SelectForm extends Component {
   handleChange = (e) => {
     this.props.selectCurrency(e.target.value);
