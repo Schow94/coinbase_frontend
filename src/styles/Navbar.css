@@ -196,7 +196,35 @@ a:hover {
   }
 }
 
-@media only screen and (min-width: 1300px) {
+@media only screen and (min-width: 1300px) and (max-width: 1500px) {
+  .navbar {
+    background-color: black;
+    position: relative;
+    display: inline-block;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    z-index: 4;
+    font-size: 16px;
+    height: 5.5em;
+  }
+
+  .nav-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-left: -2em;
+  }
+
+  .get-started {
+    border: 1px solid white;
+    padding: 1em;
+    border-radius: 0.5em;
+  }
+}
+
+@media only screen and (min-width: 1500px) {
   .navbar {
     background-color: black;
     position: relative;

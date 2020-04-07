@@ -42,4 +42,9 @@
 }
 
 @media only screen and (min-width: 1300px) {
+  .graph-container {
+    margin-top: 1%;
+    margin-bottom: 5%;
+    margin-left: 8%;
+  }
 }

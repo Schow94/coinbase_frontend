@@ -1,8 +1,11 @@
 .signin-container {
-  margin-top: 6%;
+  position: absolute;
+  top: 0;
+  left: 0;
   background-color: #1d70f5;
   font-size: 16px;
-  min-height: 700px;
+  width: 100vw;
+  min-height: 100vh;
 }
 
 .signin-title {
@@ -46,7 +49,7 @@
 }
 
 .checkbox-container {
-  display: block;
+  display: inline-block;
   text-align: left;
   margin-left: 4%;
 }
@@ -54,6 +57,7 @@
 .checkbox {
   display: inline-block;
   float: left;
+  /* width: 20px; */
 }
 
 .signin-btn {
@@ -71,23 +75,410 @@
   letter-spacing: 1px;
 }
 
+.signin-btn:hover {
+  background-color: rgb(17, 73, 216);
+}
+
 .bottom-div {
   color: white;
   text-align: center;
 }
 
 /* ----------------------------- MEDIA QUERIES ---------------------- */
-@media only screen and (min-width: 300px) and (max-width: 650px) {
-}
-
 @media only screen and (max-width: 300px) {
+  .signin-container {
+    font-size: 10px;
+  }
+
+  .signin-title {
+    font-size: 2.5em;
+    letter-spacing: 5px;
+    margin-top: 0.8em;
+  }
+
+  .signin-form {
+    min-height: 250px;
+    width: 80%;
+  }
+
+  .signin-form input {
+    font-size: 1.2em;
+    padding: 0.8em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    width: 80%;
+  }
+  .checkbox-container {
+    display: inline-block;
+    margin-top: 2em;
+    text-align: left;
+    margin-left: 4%;
+    width: 70%;
+    font-size: 1.2em;
+  }
+
+  .signin-btn {
+    font-size: 1.3em;
+    padding: 1.1em;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 1.5em;
+    margin-bottom: 0.7em;
+    letter-spacing: 1px;
+  }
+
+  .bottom-div {
+    margin-top: 2em;
+    width: 80%;
+    margin-left: 10%;
+  }
 }
 
-@media only screen and (min-width: 650px) and (max-width: 1000px) {
+@media only screen and (min-width: 300px) and (max-width: 450px) {
+  .signin-container {
+    font-size: 10px;
+  }
+
+  .signin-title {
+    font-size: 2.5em;
+    letter-spacing: 5px;
+    margin-top: 0.8em;
+  }
+
+  .signin-form {
+    min-height: 250px;
+    width: 80%;
+  }
+
+  .signin-form input {
+    font-size: 1.2em;
+    padding: 0.8em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    width: 80%;
+  }
+  .checkbox-container {
+    display: inline-block;
+    margin-top: 2em;
+    text-align: left;
+    margin-left: 4%;
+    width: 70%;
+    font-size: 1.2em;
+  }
+
+  .signin-btn {
+    font-size: 1.3em;
+    padding: 1.1em;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 1.5em;
+    margin-bottom: 0.7em;
+    letter-spacing: 1px;
+  }
+
+  .bottom-div {
+    margin-top: 2em;
+    width: 80%;
+    margin-left: 10%;
+  }
+}
+
+@media only screen and (min-width: 450px) and (max-width: 650px) {
+  .signin-container {
+    font-size: 12px;
+  }
+
+  .signin-title {
+    font-size: 2.5em;
+    letter-spacing: 5px;
+    margin-top: 1em;
+  }
+
+  .signin-form {
+    min-height: 320px;
+    width: 60%;
+  }
+
+  .signin-form input {
+    font-size: 1.4em;
+    padding: 0.8em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    width: 80%;
+  }
+  .checkbox-container {
+    display: inline-block;
+    margin-top: 2em;
+    text-align: left;
+    margin-left: 4%;
+    width: 70%;
+    font-size: 1.2em;
+  }
+
+  .signin-btn {
+    font-size: 1.3em;
+    padding: 1.1em;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 1.5em;
+    margin-bottom: 0.7em;
+    letter-spacing: 1px;
+  }
+
+  .bottom-div {
+    margin-top: 2em;
+    width: 70%;
+    margin-left: 15%;
+  }
+}
+
+@media only screen and (min-width: 650px) and (max-width: 800px) {
+  .signin-container {
+    font-size: 14px;
+  }
+
+  .signin-title {
+    font-size: 2.5em;
+    letter-spacing: 5px;
+    margin-top: 2em;
+  }
+
+  .signin-form {
+    min-height: 380px;
+    width: 50%;
+  }
+
+  .signin-form input {
+    font-size: 1.4em;
+    padding: 0.8em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    width: 80%;
+  }
+  .checkbox-container {
+    display: inline-block;
+    margin-top: 2em;
+    text-align: left;
+    margin-left: 4%;
+    width: 70%;
+    font-size: 1.2em;
+  }
+
+  .signin-btn {
+    font-size: 1.1em;
+    padding: 1.1em;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 1.5em;
+    margin-bottom: 0.7em;
+    letter-spacing: 1px;
+  }
+
+  .bottom-div {
+    margin-top: 2em;
+    width: 70%;
+    margin-left: 15%;
+  }
+}
+
+@media only screen and (min-width: 800px) and (max-width: 1000px) {
+  .signin-container {
+    font-size: 14px;
+  }
+
+  .signin-title {
+    font-size: 2.8em;
+    letter-spacing: 5px;
+    margin-top: 1.8em;
+  }
+
+  .signin-form {
+    min-height: 380px;
+    width: 50%;
+  }
+
+  .signin-form input {
+    font-size: 1.4em;
+    padding: 0.8em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    width: 70%;
+  }
+  .checkbox-container {
+    display: inline-block;
+    margin-top: 2em;
+    text-align: left;
+    margin-left: 4%;
+    width: 70%;
+    font-size: 1.2em;
+  }
+
+  .signin-btn {
+    font-size: 1.1em;
+    padding: 1.1em;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 1.5em;
+    margin-bottom: 0.7em;
+    letter-spacing: 1px;
+  }
+
+  .bottom-div {
+    margin-top: 3.5em;
+    width: 70%;
+    margin-left: 15%;
+    margin-bottom: 4em;
+  }
 }
 
 @media only screen and (min-width: 1000px) and (max-width: 1300px) {
+  .signin-container {
+    font-size: 14px;
+  }
+
+  .signin-title {
+    font-size: 3em;
+    letter-spacing: 5px;
+    margin-top: 1.8em;
+  }
+
+  .signin-form {
+    min-height: 380px;
+    width: 40%;
+  }
+
+  .signin-form input {
+    font-size: 1.4em;
+    padding: 1em;
+    padding-top: 1.2em;
+    padding-bottom: 1.2em;
+    width: 70%;
+  }
+  .checkbox-container {
+    display: inline-block;
+    margin-top: 2em;
+    text-align: left;
+    margin-left: 4%;
+    width: 70%;
+    font-size: 1.2em;
+  }
+
+  .signin-btn {
+    font-size: 1.2em;
+    padding: 1.1em;
+    width: 35%;
+    margin: 0 auto;
+    margin-top: 1.5em;
+    margin-bottom: 0.7em;
+    letter-spacing: 1px;
+  }
+
+  .bottom-div {
+    margin-top: 3.5em;
+    width: 70%;
+    margin-left: 15%;
+    margin-bottom: 4em;
+  }
 }
 
-@media only screen and (min-width: 1300px) {
+@media only screen and (min-width: 1300px) and (max-width: 1500px) {
+  .signin-container {
+    font-size: 14px;
+  }
+
+  .signin-title {
+    font-size: 3em;
+    letter-spacing: 5px;
+    margin-top: 1.4em;
+    margin-bottom: 0.8em;
+  }
+
+  .signin-form {
+    min-height: 380px;
+    width: 30%;
+  }
+
+  .signin-form input {
+    font-size: 1.4em;
+    padding: 1em;
+    padding-top: 1.2em;
+    padding-bottom: 1.2em;
+    width: 70%;
+  }
+  .checkbox-container {
+    display: inline-block;
+    margin-top: 2em;
+    margin-left: 20%;
+    padding-left: 1em;
+    width: 60%;
+    font-size: 1.2em;
+  }
+
+  .signin-btn {
+    font-size: 1.2em;
+    padding: 1.1em;
+    width: 35%;
+    margin: 0 auto;
+    margin-top: 1.5em;
+    margin-bottom: 0.7em;
+    letter-spacing: 1px;
+  }
+
+  .bottom-div {
+    margin-top: 3.5em;
+    width: 70%;
+    margin-left: 15%;
+    margin-bottom: 4em;
+  }
+}
+
+@media only screen and (min-width: 1500px) {
+  .signin-container {
+    font-size: 14px;
+  }
+
+  .signin-title {
+    font-size: 3.8em;
+    letter-spacing: 5px;
+    margin-top: 1em;
+    margin-bottom: 0.8em;
+  }
+
+  .signin-form {
+    min-height: 370px;
+    width: 30%;
+  }
+
+  .signin-form input {
+    font-size: 1.2em;
+    padding: 1em;
+    padding-top: 1.2em;
+    padding-bottom: 1.2em;
+    width: 70%;
+  }
+  .checkbox-container {
+    display: inline-block;
+    margin-top: 2em;
+    margin-left: 20%;
+    padding-left: 1em;
+    width: 60%;
+    font-size: 1.2em;
+  }
+
+  .signin-btn {
+    font-size: 1.2em;
+    padding: 1.1em;
+    width: 35%;
+    margin: 0 auto;
+    margin-top: 1.5em;
+    margin-bottom: 0.7em;
+    letter-spacing: 1px;
+  }
+
+  .bottom-div {
+    margin-top: 3.5em;
+    width: 70%;
+    margin-left: 15%;
+    margin-bottom: 4em;
+  }
 }
