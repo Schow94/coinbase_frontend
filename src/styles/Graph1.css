@@ -1,21 +1,41 @@
 .graph-container {
-  margin-top: 1%;
-  margin-left: 10%;
   color: white;
 }
 
 /* ----------------------------- MEDIA QUERIES ---------------------- */
 
 @media only screen and (max-width: 300px) {
+  .graph-container {
+    margin-top: 5%;
+  }
 }
 
 @media only screen and (min-width: 300px) and (max-width: 450px) {
+  .graph-container {
+    margin-top: 5%;
+  }
 }
 
 @media only screen and (min-width: 450px) and (max-width: 650px) {
+  .graph-container {
+    margin-top: 5%;
+  }
 }
 
-@media only screen and (min-width: 650px) and (max-width: 1000px) {
+@media only screen and (min-width: 650px) and (max-width: 800px) {
+  .graph-container {
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin-left: 5%;
+  }
+}
+
+@media only screen and (min-width: 800px) and (max-width: 1000px) {
+  .graph-container {
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin-left: 5%;
+  }
 }
 
 @media only screen and (min-width: 1000px) and (max-width: 1300px) {

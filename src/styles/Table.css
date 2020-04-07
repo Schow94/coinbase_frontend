@@ -15,7 +15,6 @@ table {
 
 thead {
   border: 1px solid black;
-  /* border-radius: 30px; */
 }
 
 .table-header {
@@ -136,10 +135,144 @@ button:hover {
   }
 }
 
-@media only screen and (max-width: 300px) {
+@media only screen and (min-width: 300px) and (max-width: 450px) {
+  table,
+  thead,
+  tbody,
+  th,
+  td,
+  tr {
+    display: block;
+  }
+
+  thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+  tr {
+    border: 1px solid #ccc;
+  }
+
+  td {
+    border: none;
+    border-bottom: 1px solid #eee;
+    font-size: 10px;
+    position: relative;
+    padding-left: 50%;
+  }
+
+  td:before {
+    /* Now like a table header */
+    position: absolute;
+    /* Top/left values mimic padding */
+    top: 6px;
+    left: 6px;
+    width: 45%;
+    padding-right: 10px;
+    white-space: nowrap;
+  }
+
+  td:nth-of-type(1):before {
+    content: 'Time';
+  }
+  td:nth-of-type(2):before {
+    content: 'High';
+  }
+  td:nth-of-type(3):before {
+    content: 'Low';
+  }
+  td:nth-of-type(4):before {
+    content: 'Open';
+  }
+  td:nth-of-type(5):before {
+    content: 'Close';
+  }
+  td:nth-of-type(6):before {
+    content: 'Volume';
+  }
 }
 
-@media only screen and (min-width: 650px) and (max-width: 1000px) {
+@media only screen and (min-width: 450px) and (max-width: 650px) {
+  table {
+    margin-top: 1em;
+    width: 90%;
+    margin-left: 5%;
+    font-size: 8px;
+  }
+
+  .table-header {
+    font-size: 1.4em;
+  }
+
+  th {
+    padding: 0.4em;
+  }
+
+  td {
+    padding: 0.4em;
+    font-size: 1.4em;
+  }
+
+  .chevrons {
+    width: 2em;
+    margin-left: 0.1em;
+  }
+}
+
+@media only screen and (min-width: 650px) and (max-width: 800px) {
+  table {
+    margin-top: 1em;
+    width: 90%;
+    margin-left: 5%;
+    font-size: 10px;
+  }
+
+  .table-header {
+    font-size: 1.4em;
+  }
+
+  th {
+    padding: 0.4em;
+  }
+
+  td {
+    padding: 0.6em;
+    font-size: 1.4em;
+  }
+
+  .chevrons {
+    width: 2em;
+    margin-left: 0.3em;
+  }
+}
+
+@media only screen and (min-width: 800px) and (max-width: 1000px) {
+  table {
+    margin-top: 1em;
+    width: 90%;
+    margin-left: 5%;
+    font-size: 12px;
+  }
+
+  .table-header {
+    font-size: 1.4em;
+  }
+
+  th {
+    padding: 0.6em;
+  }
+
+  td {
+    padding: 0.6em;
+    font-size: 1.4em;
+  }
+
+  .chevrons {
+    width: 2em;
+    margin-left: 0.3em;
+  }
 }
 
 @media only screen and (min-width: 1000px) and (max-width: 1300px) {

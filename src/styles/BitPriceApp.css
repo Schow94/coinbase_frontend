@@ -5,14 +5,18 @@
 }
 
 .container {
-  position: relative;
+  position: absolute;
   margin-top: 6%;
   font-family: 'Open Sans', sans-serif;
   display: flex;
   flex-direction: column;
-  width: 100%;
   background-color: black;
   color: white;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100vh;
+  z-index: 1;
 }
 .options-container {
   display: flex;
@@ -21,75 +25,165 @@
 }
 
 .csv-btn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   text-decoration: none;
   text-align: center;
   z-index: 1;
   background-color: none;
-  padding-top: 1.2em;
-  padding-bottom: 1.2em;
-
   border: 2px solid blue;
   border-radius: 0.5em;
   color: blue;
+  padding-left: 1em;
+  padding-right: 1em;
   font-size: 0.8em;
   font-weight: 800;
-  width: 120px;
   position: relative;
-  margin-top: 1em;
-  /* margin-left: 81%; */
 }
 
 .csv-btn:hover {
   background-color: blue;
-  padding-top: 1.2em;
-  padding-bottom: 1.2em;
   border: 2px solid blue;
   border-radius: 0.5em;
   color: white;
-  font-size: 0.8em;
-  font-weight: 800;
   cursor: pointer;
 }
 
 /* ----------------------------- MEDIA QUERIES ---------------------- */
 @media only screen and (max-width: 300px) {
   .container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    min-height: 100vh;
-    background-color: black;
-    color: white;
     font-size: 10px;
-    z-index: 1;
   }
   .title {
+    margin-top: 1.5em;
+    margin-bottom: 1em;
+    font-size: 1.8em;
+  }
+
+  .options-container {
     display: flex;
-    justify-content: center;
-    text-transform: uppercase;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .csv-btn {
+    font-size: 1em;
+  }
+
+  .csv-btn:hover {
+    font-size: 0.8em;
+    font-weight: 800;
+    font-size: 1em;
   }
 }
 
 @media only screen and (min-width: 300px) and (max-width: 450px) {
+  .container {
+    font-size: 10px;
+  }
+  .title {
+    margin-top: 1.5em;
+    margin-bottom: 1em;
+    font-size: 1.8em;
+  }
+
+  .options-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .csv-btn {
+    font-size: 1em;
+  }
+
+  .csv-btn:hover {
+    font-size: 0.8em;
+    font-size: 1em;
+  }
 }
 
 @media only screen and (min-width: 450px) and (max-width: 650px) {
   .container {
-    position: relative;
-    margin-top: 6%;
-    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+  }
+
+  .title {
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+    font-size: 1.8em;
+  }
+
+  .options-container {
     display: flex;
-    flex-direction: column;
-    width: 100%;
-    background-color: black;
-    color: white;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .csv-btn {
+    font-size: 1em;
+  }
+
+  .csv-btn:hover {
+    font-size: 0.8em;
+    font-size: 1em;
   }
 }
 
-@media only screen and (min-width: 650px) and (max-width: 1000px) {
+@media only screen and (min-width: 650px) and (max-width: 800px) {
+  .container {
+    font-size: 16px;
+  }
+
+  .title {
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+    font-size: 2em;
+  }
+
+  .options-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-bottom: 3em;
+  }
+
+  .csv-btn {
+    font-size: 1em;
+  }
+
+  .csv-btn:hover {
+    font-size: 0.8em;
+    font-size: 1em;
+  }
+}
+@media only screen and (min-width: 800px) and (max-width: 1000px) {
+  .container {
+    font-size: 20px;
+  }
+
+  .title {
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+    font-size: 2em;
+  }
+
+  .options-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-bottom: 3em;
+  }
+
+  .csv-btn {
+    font-size: 1em;
+  }
+
+  .csv-btn:hover {
+    font-size: 0.8em;
+    font-size: 1em;
+  }
 }
 
 @media only screen and (min-width: 1000px) and (max-width: 1300px) {
